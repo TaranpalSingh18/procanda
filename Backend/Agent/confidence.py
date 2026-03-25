@@ -148,4 +148,9 @@ result = graph.invoke({
     "candidate_answer": "I convinced a hesitant client by understanding their needs and showing ROI."
 })
 
-print(result)
+def run_evaluator(skill, question_type, answer):
+    return graph.invoke({
+        "skill": skill,
+        "question_type": question_type,
+        "candidate_answer": answer
+    })
